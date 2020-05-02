@@ -14,22 +14,34 @@ import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 Amplify.configure(awsconfig);
 
+
 class App extends React.Component {
   async componentDidMount() {
     // Simple query
     const allTodos = await API.graphql(graphqlOperation(queries.listMyTypes));
     console.log(allTodos);
+    // Query using a parameter
+    // const oneTodo = await API.graphql(graphqlOperation(queries.getTodo, { id: 'some id' }));
+    // console.log(oneTodo);
   }
 
-
-  // Query using a parameter
-  // const oneTodo = await API.graphql(graphqlOperation(queries.getTodo, { id: 'some id' }));
-  // console.log(oneTodo);
+  constructor(props) {
+    super(props)
+    this.state = {
+      questionNumber: 0
+    }
+    this.nextQuestion = this.nextQuestion.bind(this)
+  }
+  nextQuestion() {
+    this.setState({ questionNumber: this.state.questionNumber + 1 })
+  }
   render() {
+
     return (
-      <div className="App" >
-        <Question data={questionsData} />
+      <div className="App">
+        <Question data={questionsData[this.state.questionNumber]} next={this.nextQuestion} />
         <AmplifySignOut />
+
       </div>
     );
   }
