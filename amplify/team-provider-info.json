@@ -1,0 +1,22 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-schulgold-dev-160252-authRole",
+            "UnauthRoleArn": "arn:aws:iam::750258741470:role/amplify-schulgold-dev-160252-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::750258741470:role/amplify-schulgold-dev-160252-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplify-schulgold-dev-160252-deployment",
+            "UnauthRoleName": "amplify-schulgold-dev-160252-unauthRole",
+            "StackName": "amplify-schulgold-dev-160252",
+            "StackId": "arn:aws:cloudformation:eu-central-1:750258741470:stack/amplify-schulgold-dev-160252/a9519c40-8c7d-11ea-b2f9-0248cb00433a",
+            "AmplifyAppId": "d253f0b8aqra78"
+        },
+        "categories": {
+            "auth": {
+                "schulgold6445abcc": {
+                    "hostedUIProviderCreds": "[]"
+                }
+            }
+        }
+    }
+}
