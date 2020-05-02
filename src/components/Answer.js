@@ -9,7 +9,9 @@ function onButtonClick(e) {
 class Answer extends React.Component {
     render() {
         const color = this.props.color
-        return <button onClick={onButtonClick} className="buttonAnswer" style={{ backgroundColor: color, borderColor: color }}>{this.props.label} </button>
+        return <div className="answerWrapper">
+            <button onClick={onButtonClick} className="buttonAnswer" style={{ backgroundColor: color, borderColor: color }}>{this.props.label} </button>
+        </div>
     }
 }
 

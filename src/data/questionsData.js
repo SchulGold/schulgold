@@ -4,22 +4,24 @@ export default {
         {
             label: "ice cream",
             value: 5,
+            color: 'rgb(226, 27, 60)',
+
         },
         {
             label: "a pie",
             value: 2,
+            color: 'rgb(216, 158, 0)',
         },
         {
             label: "mama",
             value: 1,
+            color: 'rgb(19, 104, 206)',
         },
         {
             label: "i don't care",
             value: 0,
+            color: 'rgb(38, 137, 12)',
         },
-        {
-            label: "whatever",
-            value: 7,
-        }
+
     ]
 }
