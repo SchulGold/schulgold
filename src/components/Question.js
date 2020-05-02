@@ -4,8 +4,8 @@ import Answer from './Answer'
 
 
 
-function renderAnswer(answer) {
-    return <Answer label={answer.label} isCorrect={false} key={answer.value} color={answer.color}></Answer>
+function renderAnswer(answer, next) {
+    return <Answer label={answer.label} isCorrect={false} key={answer.value} color={answer.color} next={next}></Answer>
 }
 const Question = (props) => {
     console.log(props.data);
@@ -14,14 +14,14 @@ const Question = (props) => {
         <h1 > {props.data.text} </h1>
         <div className="answerListContainer">
             <div className="answerRow">
-                {renderAnswer(props.data.answers[0])}
-                {renderAnswer(props.data.answers[1])}
+                {renderAnswer(props.data.answers[0], props.next)}
+                {renderAnswer(props.data.answers[1], props.next)}
 
             </div>
 
             <div className="answerRow">
-                {renderAnswer(props.data.answers[2])}
-                {renderAnswer(props.data.answers[3])}
+                {renderAnswer(props.data.answers[2], props.next)}
+                {renderAnswer(props.data.answers[3], props.next)}
 
             </div>
         </div>

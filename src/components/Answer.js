@@ -10,7 +10,7 @@ class Answer extends React.Component {
     render() {
         const color = this.props.color
         return <div className="answerWrapper">
-            <button onClick={onButtonClick} className="buttonAnswer" style={{ backgroundColor: color, borderColor: color }}>{this.props.label} </button>
+            <button onClick={this.props.next} className="buttonAnswer" style={{ backgroundColor: color, borderColor: color }}>{this.props.label} </button>
         </div>
     }
 }
