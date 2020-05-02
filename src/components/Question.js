@@ -1,28 +1,29 @@
 import React from 'react';
+import Answer from './Answer'
 
 
-function onButtonClick(e) {
-    e.preventDefault()
-    alert("I click an answer");
-}
 
-function Answer(props) {
-    return <button onClick={onButtonClick} className="buttonAnswer" >{props.label} </button>
 
+function renderAnswer(answer, next) {
+    return <Answer label={answer.label} isCorrect={false} key={answer.value} color={answer.color} next={next}></Answer>
 }
 const Question = (props) => {
     console.log(props.data);
-    const answerList = props.data.answers.map(
-        function renderAnswer(answer) {
-            return <Answer label={answer.label} key={answer.value}></Answer>
-        }
-    );
+
     return <div className="question">
         <h1 > {props.data.text} </h1>
-        <div >
-            {
-                answerList
-            }
+        <div className="answerListContainer">
+            <div className="answerRow">
+                {renderAnswer(props.data.answers[0], props.next)}
+                {renderAnswer(props.data.answers[1], props.next)}
+
+            </div>
+
+            <div className="answerRow">
+                {renderAnswer(props.data.answers[2], props.next)}
+                {renderAnswer(props.data.answers[3], props.next)}
+
+            </div>
         </div>
     </div>
 }
