@@ -1,17 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Question from './components/Question';
 import questionsData from './data/questionsData';
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import Navbar from "./components/Navbar"
 
-import { API, graphqlOperation } from 'aws-amplify';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import * as queries from './graphql/queries';
 
 
-
-import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
+
+
+import { AmplifyAuthenticator, AmplifySignIn, AmplifySignOut } from '@aws-amplify/ui-react';
+
+
+
 Amplify.configure(awsconfig);
 
 
@@ -37,14 +40,54 @@ class App extends React.Component {
   }
   render() {
 
-    return (
-      <div className="App">
-        <Question data={questionsData[this.state.questionNumber]} next={this.nextQuestion} />
-        <AmplifySignOut />
+    const MyTheme = {
+      sectionHeader: { backgroundColor: "red" },
 
+    }
+
+    return (
+      <div className="loginContainer">
+        <AmplifyAuthenticator style={{
+          width: "100%",
+        }} username-alias="Email" federated={false} theme={MyTheme}>
+          <div className="signInContainer" slot="sign-in"
+          >
+            <div class="signInBrandContainer">
+              <h1 class="headingSignIn">School Gold</h1>
+              <p class="descriptionSingIn">The financial literacy plaftorm for the little ones.</p>
+
+            </div>
+            <AmplifySignIn usernameAlias="email"
+              federated={false}
+              headerText=""
+              formFields={[{
+                type: "email",
+                label: "Email",
+                placeholder: "student@school.com",
+                required: true,
+              },
+              {
+                type: "password",
+                label: "Password",
+                placeholder: "password",
+                required: true,
+              }]} >
+            </AmplifySignIn>
+          </div>
+
+
+          <div>
+            <Navbar></Navbar>
+            <Question data={questionsData[this.state.questionNumber]} next={this.nextQuestion} />
+          </div>
+        </AmplifyAuthenticator>
       </div>
+
     );
   }
 }
 
+
+
 export default App;
+
