@@ -44,15 +44,11 @@
             "Arn"
         ]
     },
-    "useDefault": "defaultSocial",
+    "useDefault": "default",
     "hostedUI": true,
     "usernameAttributes": [
         "email"
     ],
-    "hostedUIDomainName": "schulgold6445abcc-6445abcc",
-    "authProvidersUserPool": [],
-    "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://www.bogdanned.com/\"],\"LogoutURLs\":[\"https://www.bogdanned.com/\"]}",
     "userPoolGroupList": [],
     "dependsOn": []
 }

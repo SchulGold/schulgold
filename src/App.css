@@ -16,7 +16,12 @@ h1,button{
 
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -107,3 +112,112 @@ h1,button{
   padding-left: 15px;
   padding-right: 15px;
 }
+
+
+
+/* login styles  */
+
+.AmplifyUI.container{
+  width: 100%;
+}
+
+.loginContainer{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* width: fit-content; */
+  margin: auto;
+}
+
+
+:root {
+  --amplify-primary-color: #1a1a1a;
+  --amplify-primary-tint: #808080;
+  --amplify-primary-shade: #000000;
+  --amplify-font-family: Poppins;
+}
+
+div.form-section-header{
+  font-size: 40px !important;
+}
+
+.secondary-footer-content{
+  display: none;
+}
+
+.signInContainer{
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.signInBrandContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 20px;
+}
+
+.headingSignIn{
+  font-family: Poppins;
+  font-size: 70px;
+  margin: 0px;
+}
+
+.descriptionSingIn{
+
+}
+
+/* login styles  */
+
+/* navbar start  */
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px;
+  top: 0px;
+  position: absolute;
+  margin: 0px
+}
+
+.heading {
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 30px;
+  color: #140909;
+  letter-spacing: -3.48px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin: 0px 0px 0px 0px;
+  max-width: 590px;
+}
+
+.description {
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #0c0a0a;
+  letter-spacing: -0.88px;
+  text-align: left;
+  max-width: 482px;
+}
+
+.heading-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+/* navbar end  */
+
