@@ -19,6 +19,7 @@
 
 :root {
   --main-color: #ff5200;
+  --secondary-color: #e54595;
   --secondary-orange: #ffa500;
   --main-green: #50d890;
   --main-blue: #162447;
@@ -100,27 +101,31 @@ p.lead {
 }
 
 .btn-outline-light:hover {
-  color: #d6619c;
+  color: var(--main-color);
 }
 
 .btn-primary {
   border-radius: 3px;
   background-image: -moz-linear-gradient(
     122deg,
-    #e54595 0%,
+    var(--secondary-color) 0%,
     var(--main-color) 100%
   );
   background-image: -webkit-linear-gradient(
     122deg,
-    #e54595 0%,
+    var(--secondary-color) 0%,
     var(--main-color) 100%
   );
   background-image: -ms-linear-gradient(
     122deg,
-    #e54595 0%,
+    var(--secondary-color) 0%,
     var(--main-color) 100%
   );
-  background-image: linear-gradient(122deg, #e54595 0%, var(--main-color) 100%);
+  background-image: linear-gradient(
+    122deg,
+    var(--secondary-color) 0%,
+    var(--main-color) 100%
+  );
   box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
   font-weight: 500;
   padding: 0.6rem 2rem;
@@ -133,7 +138,11 @@ p.lead {
 .btn-primary:not([disabled]):not(.disabled).active,
 .btn-primary:not([disabled]):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
-  background-image: linear-gradient(122deg, #fd378e 0%, #e54595 100%);
+  background-image: linear-gradient(
+    122deg,
+    --secondary-color 0%,
+    var(--secondary-color) 100%
+  );
   box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
   color: #fff;
 }
@@ -196,17 +205,17 @@ p.lead {
   background: -moz-linear-gradient(
     135deg,
     var(--main-color) 0%,
-    rgb(250, 42, 143) 100%
+    var(--secondary-color) 100%
   );
   background: -webkit-linear-gradient(
     135deg,
     var(--main-color) 0%,
-    rgb(250, 42, 143) 100%
+    var(--secondary-color) 100%
   );
   background: linear-gradient(
     135deg,
     var(--main-color) 0%,
-    rgb(250, 42, 143) 100%
+    var(--secondary-color) 100%
   );
   -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
@@ -313,9 +322,21 @@ header {
 
 .gradient-fill:before {
   color: var(--main-color);
-  background: -moz-linear-gradient(top, var(--main-color) 0%, #fc73b4 100%);
-  background: -webkit-linear-gradient(top, var(--main-color) 0%, #fc73b4 100%);
-  background: linear-gradient(to bottom, var(--main-color) 0%, #fc73b4 100%);
+  background: -moz-linear-gradient(
+    top,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -342,9 +363,21 @@ header {
   position: absolute;
   width: 3px;
   color: var(--main-color);
-  background: -moz-linear-gradient(top, var(--main-color) 0%, #fc73b4 100%);
-  background: -webkit-linear-gradient(top, var(--main-color) 0%, #fc73b4 100%);
-  background: linear-gradient(to bottom, var(--main-color) 0%, #fc73b4 100%);
+  background: -moz-linear-gradient(
+    top,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
   top: 0;
   bottom: 0;
   left: 0;
